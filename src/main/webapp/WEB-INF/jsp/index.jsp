@@ -17,10 +17,10 @@
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">LMS</a>
+				<a class="navbar-brand" href="/">LMS</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">All Books</a></li>
+				<li class="active"><a href="/">All Books</a></li>
 				<li><a href="#">New Book</a></li>
 			</ul>
 		</div>

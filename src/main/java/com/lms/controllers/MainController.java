@@ -50,7 +50,7 @@ public class MainController {
     @InitBinder
     private void dateBinder(WebDataBinder binder) {
         //The date format to parse or output your dates
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         //Create a new CustomDateEditor
         CustomDateEditor editor = new CustomDateEditor(dateFormat, true);
         //Register it as custom editor for the Date type
