@@ -22,4 +22,8 @@ public class LmsService {
         }
         return books;
     }
+
+    public void delete(long id){
+        lmsRepository.deleteById(id);
+    }
 }
