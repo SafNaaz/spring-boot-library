@@ -15,10 +15,10 @@ public class MainRestController {
     @Autowired
     LmsService lmsService;
 
-    @GetMapping(value = "/")
+    /*@GetMapping(value = "/")
     public String hello(){
         return "Hello World !";
-    }
+    }*/
 
     @GetMapping("/findAllBooks")
     public Collection<Book> getAllBooks(){
