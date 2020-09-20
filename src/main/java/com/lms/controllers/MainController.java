@@ -4,6 +4,7 @@ import com.lms.services.LmsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,8 +15,10 @@ public class MainController {
     LmsService lmsService;
 
     @GetMapping("/")
-    public String init(HttpServletRequest request){
-        request.setAttribute("books" , lmsService.findAllBooks());
-        return "index";
+    public ModelAndView init(){
+        ModelAndView model = new ModelAndView();
+        model.addObject("books" , lmsService.findAllBooks());
+        model.setViewName("index");
+        return model;
     }
 }
