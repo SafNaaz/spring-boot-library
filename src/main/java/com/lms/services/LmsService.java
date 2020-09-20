@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LmsService {
@@ -25,5 +26,13 @@ public class LmsService {
 
     public void delete(long id){
         lmsRepository.deleteById(id);
+    }
+    
+    public Optional<Book> findOne(long id) {
+    	return lmsRepository.findById(id);
+    }
+    
+    public void save(Book book) {
+    	lmsRepository.save(book);
     }
 }
