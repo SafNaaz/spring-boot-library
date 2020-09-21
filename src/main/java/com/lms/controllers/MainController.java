@@ -64,4 +64,11 @@ public class MainController {
     	model.setViewName("index");
         return model;
     }
+
+    @GetMapping("/deleteBook")
+    public String deleteBook(@RequestParam long id){
+        ModelAndView model = new ModelAndView();
+        lmsService.delete(id);
+        return "redirect:/";
+    }
 }
