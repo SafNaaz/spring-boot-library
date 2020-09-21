@@ -21,7 +21,7 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="/">All Books</a></li>
-				<li><a href="#">New Book</a></li>
+				<li><a href="/newBook">New Book</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -53,10 +53,14 @@
 				</table>
 			</c:when>
 
-			<c:when test="${mode == 'BOOK_EDIT'}">
+			<c:when test="${mode == 'BOOK_EDIT' || mode == 'BOOK_NEW'}">
 				<form action="/save" method="post">
+				<c:choose>
+				<c:when test="${mode == 'BOOK_EDIT'}">
 				<input type="hidden"
 							class="form-control" id="id" name="id" value="${book.id}">
+							</c:when>
+							</c:choose>
 					<div class="form-group">
 						<label for="bookName">Book Name:</label> <input type="text"
 							class="form-control" id="bookName" name="bookName" value="${book.bookName}">

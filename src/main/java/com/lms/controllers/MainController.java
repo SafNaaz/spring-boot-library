@@ -56,4 +56,12 @@ public class MainController {
         //Register it as custom editor for the Date type
         binder.registerCustomEditor(Date.class, editor);
     }
+    
+    @GetMapping("/newBook")
+    public ModelAndView newBook(){
+    	ModelAndView model = new ModelAndView();
+    	model.addObject("mode" , "BOOK_NEW");
+    	model.setViewName("index");
+        return model;
+    }
 }
